@@ -1,0 +1,157 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Theme styles */
+body.light {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+body.dark h1, 
+body.dark h2 {
+    color: #fff;
+}
+
+body.blue {
+    background-color: #e6f2ff;
+    color: #003366;
+}
+
+/* Form styles */
+.preference-panel {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+body.dark .preference-panel {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Button styles */
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation area */
+.animation-area {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .animation-area {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.bounce {
+    animation: bounce 0.5s ease infinite;
+}
+
+@keyframes colorChange {
+    0% { background-color: #4CAF50; }
+    25% { background-color: #2196F3; }
+    50% { background-color: #f44336; }
+    75% { background-color: #FFC107; }
+    100% { background-color: #4CAF50; }
+}
+
+.color-change {
+    animation: colorChange 3s linear infinite;
+}
+
+/* Animated element states */
+.animated {
+    transform: scale(1.2);
+    background-color: #f44336;
+    border-radius: 50%;
+}
